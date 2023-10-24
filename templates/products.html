@@ -1,0 +1,19 @@
+<!-- products.html -->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Список товаров</title>
+   
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+    <h1>Список товаров</h1>
+    <ul>
+    {% for product in products %}
+        <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
